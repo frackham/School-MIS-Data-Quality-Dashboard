@@ -60,12 +60,12 @@ end function
 - Additional, advanced rules based on existing rule data sources
 
 ##Master data
--Groups (priority, contacts()).
--Contacts (email(s)).
+- Groups (priority, contacts()).
+- Contacts (email(s)).
 
 ##Core Data Objects
--Rule/Test. A rule is the basic building block. Each rule (within the MIS usually) creates an output file. No fails? No rows in the output. (Call it rule or test?).
--Log. Simple list of exceptions (errors) for a particular timestamp.
+- Rule/Test. A rule is the basic building block. Each rule (within the MIS usually) creates an output file. No fails? No rows in the output. (Call it rule or test?).
+- Log. Simple list of exceptions (errors) for a particular timestamp.
 
 ##Application Workflow (Assuming deployment correct).
 - Scheduled rules run over a period of time. Rules create files in secure folder.
