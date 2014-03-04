@@ -80,7 +80,7 @@ end function
     4. Check the current log against the last log, and increment any recurrences in the current log.
     5. (Get postprocessing rules and act on them?).
     6. Delete the source file?
-  4. Act on the current log, using the [RACI definitions]() for the group of each report.
+  4. Act on the current log, using the [RACI definitions](http://www.itsmprofessor.net/2010/10/why-use-raci-matrix.html) for the group of each report.
     1. For each report, get Responsible, Accountable, Consult, Inform of the group of that report. 
     2. If Responsible, notify of all errors.
     3. If Accountable, notify of serious and recurring errors.
