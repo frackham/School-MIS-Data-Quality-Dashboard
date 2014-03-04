@@ -25,7 +25,7 @@ In God we trust, everyone else bring data.
 
 And here's a code block for vba:
 
-```visual basic
+```vb
 option explicit
 public function DoDemoVBACode() as string()
   dim sLang as string
