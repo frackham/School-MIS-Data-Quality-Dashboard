@@ -14,12 +14,17 @@ School-MIS-Data-Quality-Dashboard
 This is standard body text, except for *this* really **bold** bit.
 
 But as Deming said:
+
 >In God we trust, everyone else bring data.
+
 Maybe that looks better as a code block?
+
 ```
 In God we trust, everyone else bring data.
 ```
+
 And here's a code block for vba:
+
 ```vba
 option explicit
 public function DoDemoVBACode() as string()
