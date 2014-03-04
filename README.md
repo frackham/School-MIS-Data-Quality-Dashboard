@@ -65,7 +65,7 @@ end function
 
 ##Core Data Objects
 -Rule/Test. A rule is the basic building block. Each rule (within the MIS usually) creates an output file. No fails? No rows in the output. (Call it rule or test?).
--
+-Log. Simple list of exceptions (errors) for a particular timestamp.
 
 ##Application Workflow (Assuming deployment correct).
 - Scheduled rules run over a period of time. Rules create files in secure folder.
