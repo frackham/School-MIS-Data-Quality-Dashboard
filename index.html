@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>School-mis-data-quality-dashboard by frackham</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>School-mis-data-quality-dashboard</h1>
+        <p></p>
+
+        <p class="view"><a href="https://github.com/frackham/School-MIS-Data-Quality-Dashboard">View the Project on GitHub <small>frackham/School-MIS-Data-Quality-Dashboard</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/frackham/School-MIS-Data-Quality-Dashboard/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/frackham/School-MIS-Data-Quality-Dashboard/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/frackham/School-MIS-Data-Quality-Dashboard">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="school-mis-data-quality-dashboard" class="anchor" href="#school-mis-data-quality-dashboard"><span class="octicon octicon-link"></span></a>School-MIS-Data-Quality-Dashboard</h1>
+
+<h1>
+<a name="markdown-test-area-for-mobile-clients" class="anchor" href="#markdown-test-area-for-mobile-clients"><span class="octicon octicon-link"></span></a>Markdown test area for mobile clients.</h1>
+
+<h1>
+<a name="h1-test" class="anchor" href="#h1-test"><span class="octicon octicon-link"></span></a>H1 Test</h1>
+
+<h2>
+<a name="h2-test" class="anchor" href="#h2-test"><span class="octicon octicon-link"></span></a>H2 Test</h2>
+
+<h3>
+<a name="h3-test" class="anchor" href="#h3-test"><span class="octicon octicon-link"></span></a>H3 Test</h3>
+
+<h4>
+<a name="h4-test" class="anchor" href="#h4-test"><span class="octicon octicon-link"></span></a>H4 Test</h4>
+
+<h5>
+<a name="h5-test" class="anchor" href="#h5-test"><span class="octicon octicon-link"></span></a>H5 Test</h5>
+
+<h6>
+<a name="h6-test" class="anchor" href="#h6-test"><span class="octicon octicon-link"></span></a>H6 Test</h6>
+
+<h6>
+<a name="h7-test" class="anchor" href="#h7-test"><span class="octicon octicon-link"></span></a>#H7 Test</h6>
+
+<p>This is standard body text, except for <em>this</em> really <strong>bold</strong> bit.</p>
+
+<p>But as Deming said:</p>
+
+<blockquote>
+<p>In God we trust, everyone else bring data.</p>
+</blockquote>
+
+<p>Maybe that looks better as a code block?</p>
+
+<pre><code>In God we trust, everyone else bring data.
+</code></pre>
+
+<p>And here's a code block for vba:</p>
+
+<div class="highlight highlight-vb"><pre><span class="k">option</span> <span class="n">explicit</span>
+<span class="k">public</span> <span class="k">function</span> <span class="nf">DoDemoVBACode</span><span class="p">()</span> <span class="ow">as</span> <span class="kt">string</span><span class="p">()</span>
+  <span class="k">dim</span> <span class="n">sLang</span> <span class="ow">as</span> <span class="kt">string</span>
+  <span class="n">sLang</span> <span class="o">=</span> <span class="s">"VBA"</span> <span class="p">#</span><span class="n">Don</span><span class="c">'t judge me.</span>
+  <span class="n">msgbox</span><span class="p">(</span><span class="s">"Well, here's some demo code. It's in the "</span> <span class="o">&amp;</span> <span class="n">sLang</span> <span class="o">&amp;</span> <span class="s">" language."</span><span class="p">)</span> 
+<span class="k">end</span> <span class="k">function</span>
+</pre></div>
+
+<h1>
+<a name="principles" class="anchor" href="#principles"><span class="octicon octicon-link"></span></a>Principles</h1>
+
+<ol>
+<li>
+<strong>Open source</strong>. Both development and the app itself is open source. I (we?) feel like this is too imporrtant to lave to MIS vendors. Ideally this'd be a open source language as well, but that'll probably intergere with...</li>
+<li>
+<strong>Simple to deploy and setup</strong>. If there's not formal support, it's gotta be easy. As in unzip a folder easy.</li>
+<li>
+<strong>Easily exten_dable_</strong>. Got a new rule to test? Just add it to your schedule, and let the dashboard discover it.</li>
+<li>
+<strong>Real, actionable measurement</strong>.</li>
+<li>
+<strong>Tweak and adapt to your school <em>over time</em>, not at deployment</strong>.</li>
+<li>
+<strong>Easily exten_sible_</strong>. <a href="">See here for the difference between extendable and extensible</a>.</li>
+</ol><p>&lt; This one's a bit geeky. Sorry.</p>
+
+<ol>
+<li>
+<strong>Assessment last</strong>. Assessment is arguably the most powerful of the data that drives learning. It's also the most school specific, the trickiest to define and the most susceptible to national change. We get this tool right first, and then move to summative assessment when it's established and working well.</li>
+<li>
+<strong>Enable data users to discover related information</strong>. It's not easy to learn what data is out there.</li>
+</ol><h1>
+<a name="simple-functional-specification" class="anchor" href="#simple-functional-specification"><span class="octicon octicon-link"></span></a>Simple Functional Specification</h1>
+
+<ul>
+<li>Drag and drop ordering of school priorities. Priority affects who gets notified (e.g. priority group 1 might be he head/senior leader. If there are real concerns with an area of data, raise its priority!).</li>
+<li>Discovery of new reports/tests as you add them.</li>
+<li>Rules/tests are tagged/assigned to data groups, who have RACI owners.</li>
+<li>RACI grid determines who gets what when.</li>
+<li>Email notification.</li>
+<li>Overall view of how good the data is.</li>
+<li>Time view of individual tests, and the overall.</li>
+<li>Additional, advanced rules based on existing rule data sources</li>
+</ul><h2>
+<a name="master-data" class="anchor" href="#master-data"><span class="octicon octicon-link"></span></a>Master data</h2>
+
+<ul>
+<li>Groups (priority, contacts()).</li>
+<li>Contacts (email(s)).</li>
+</ul><h2>
+<a name="core-data-objects" class="anchor" href="#core-data-objects"><span class="octicon octicon-link"></span></a>Core Data Objects</h2>
+
+<ul>
+<li>Rule/Test. A rule is the basic building block. Each rule (within the MIS usually) creates an output file. No fails? No rows in the output. (Call it rule or test?).</li>
+<li>Log. Simple list of exceptions (errors) for a particular timestamp.</li>
+</ul><h2>
+<a name="application-workflow-assuming-deployment-correct" class="anchor" href="#application-workflow-assuming-deployment-correct"><span class="octicon octicon-link"></span></a>Application Workflow (Assuming deployment correct).</h2>
+
+<ul>
+<li>Scheduled rules run over a period of time. Rules create files in secure folder.</li>
+<li>Application triggers at defined cycle.
+
+<ol>
+<li>Timestamp.</li>
+<li>Access secure folder.</li>
+<li>For each file in folder structure:
+
+<ol>
+<li>Get file metadata (time, number of records, group from filename, owner RACI from filename). Save metadata to metadata log.</li>
+<li>Load data.</li>
+<li>(Get advanced/preprocessing rules and act on them).</li>
+<li>For each error found, log the full data of the error into the current log.</li>
+<li>Check the current log against the last log, and increment any recurrences in the current log.</li>
+<li>(Get postprocessing rules and act on them?).</li>
+<li>Delete the source file?</li>
+</ol>
+</li>
+<li>Act on the current log, using the <a href="http://www.itsmprofessor.net/2010/10/why-use-raci-matrix.html">RACI definitions</a> for the group of each report.
+
+<ol>
+<li>For each report, get Responsible, Accountable, Consult, Inform of the group of that report. </li>
+<li>If Responsible, notify of all errors.</li>
+<li>If Accountable, notify of serious and recurring errors.</li>
+<li>If Consult, do nothing. Maybe monthly/termly update? </li>
+<li>If Inform, give overview only?</li>
+</ol>
+</li>
+<li>Update visual dashboard. </li>
+</ol>
+</li>
+<li>Notify top level owners of outcome of cycle.</li>
+<li>Clearup.</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/frackham">frackham</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-36571174-2");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
