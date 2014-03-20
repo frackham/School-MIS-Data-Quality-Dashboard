@@ -90,3 +90,12 @@ end function
 - Notify top level owners of outcome of cycle.
 - Clearup.
 
+
+
+#Extension
+##Databox
+More likely an alternative to databox, as that's proprietary.
+Would like the following items also tracked:
+- SIMS Server tracking.
+- Data quality of all above items.
+- JSON of Trello task list (for a given list in a given board, this is treated as Active. Another is Backlog. Another() set of Done?). Capture Red/Orange/Yellow/Green at each capture time, as well as amount.
