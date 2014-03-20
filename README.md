@@ -42,7 +42,7 @@ end function
 3. **Easily exten_dable_**. Got a new rule to test? Just add it to your schedule, and let the dashboard discover it.
 4. **Real, actionable measurement**.
 5. **Tweak and adapt to your school _over time_, not at deployment**.
-6. **Easily exten_sible_**. [See here for the difference between extendable and extensible]().
+6. **Easily exten_sible_**. [See here for the why we mean extensible and not extendable](http://en.wikipedia.org/wiki/Extensibility).
 
 < This one's a bit geeky. Sorry.
 
