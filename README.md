@@ -29,7 +29,7 @@ And here's a code block for vba:
 option explicit
 public function DoDemoVBACode() as string()
   dim sLang as string
-  sLang = "VBA" #Don't judge me.
+  sLang = "VBA" 'Don't judge me.
   msgbox("Well, here's some demo code. It's in the " & sLang & " language.") 
 end function
 ```
