@@ -1,0 +1,90 @@
+{
+  "title": "Data Manager Dashboard Refactored",
+  "subtitle": "Click on a header to see current status of this area. Click on the Click on these for more information icon to see more resources related to the area.",
+  "description": "",
+  "dataset": {
+    "block-item": {
+      "title": "Whole School",
+      "overview": "Overall, key requirements are being met on an ad hoc basis. The intention is to use this document to provide immediate transparency and strategic oversight of all areas.
+Next step, once complete: Discuss with SCR and CHA (separately) as to whole school focus/needs (Align to school needs). Also need to consider what is Strategic, and what is Assessment. RAISE and such aren't really strategic in the sense of future projection... ",
+      "monitoring-links": [
+        "link": {
+                  "label": "Trello task list",
+                  "link-class": "linktested",
+                  "link": "https://trello.com/b/gRH3AHHe/data-tasks"
+                },
+        "link": {
+                  "label": "Trello task list",
+                  "link-class": "linktested",
+                  "link": "https://trello.com/b/gRH3AHHe/data-tasks"
+                }
+      ],
+      "resources-links": [
+        "link": {
+                  "label": "Trello task list",
+                  "link-class": "linktested",
+                  "link": "https://trello.com/b/gRH3AHHe/data-tasks"
+                },
+        "link": {
+                  "label": "Trello task list",
+                  "link-class": "linktested",
+                  "link": "https://trello.com/b/gRH3AHHe/data-tasks"
+                }
+      ],
+      "blocks": [            
+          "block-item": {
+            "title": "Data Protection",
+            "overview": "overall, key requirements are being met on an ad hoc basis.
+Next steps: rewrite data policy into 2, issue guidance, write quick breach action protocol. ",
+            "monitoring-links": [
+              "link": {
+                        "label": "Trello task list",
+                        "link-class": "linktested",
+                        "link": "https://trello.com/b/gRH3AHHe/data-tasks"
+                      },
+              "link": {
+                        "label": "Trello task list",
+                        "link-class": "linktested",
+                        "link": "https://trello.com/b/gRH3AHHe/data-tasks"
+                      }
+            ],
+            "resources-links": [
+              "link": {
+                        "label": "Trello task list",
+                        "link-class": "linktested",
+                        "link": "https://trello.com/b/gRH3AHHe/data-tasks"
+                      },
+              "link": {
+                        "label": "Trello task list",
+                        "link-class": "linktested",
+                        "link": "https://trello.com/b/gRH3AHHe/data-tasks"
+                      }
+            ],
+            "blocks": [
+            
+            
+            
+             ]
+            
+          
+          }
+      
+      
+       ]
+      
+    
+    },
+    
+  
+  
+  
+  
+  },
+  "footer": "Footer here. Needed to space so we can reach the (i) boxes for the last items",
+  "todo-items": [
+    {"todo": "Add a separate system status (what is working) dashboard view. E.g. SIMS Server Up, Email down."},
+    {"todo": "Add a simplified timeline view for maintainance and projects."},
+    {"todo": "Add a mechanism for updated todo items from the page."},
+    {"todo": ""}
+  ]
+}
