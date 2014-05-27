@@ -1,0 +1,14 @@
+DAL_Specifics
+Data Access Layer (Specific Cases)
+Provides the core functionality to support specific cases of Acquire, Parse, (Filter) sections of Fry's framework.
+All functions/classes here handle turning a specific type of data source into a dataset or internal object(s) (of type Y).
+
+These are separate for DAL_Core, so that when the data source definitions (e.g. design of a scraped public website) change, the core functionality does not need to change
+
+
+
+e.g.
+function RetrieveEdubaseDataset(sURN as string) as Dataset
+	'uses the HTML URI crawling of the DAL_Core library.
+
+end function

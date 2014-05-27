@@ -1,0 +1,28 @@
+DAL_Core
+Data Access Layer (Generic Cases)
+Provides the core functionality to support specific cases of Acquire, Parse, (Filter) sections of Fry's framework.
+All functions/classes here handle turning a data source (of type X) into a dataset or internal object(s) (of type Y).
+
+
+e.g.
+
+sub URIToRawText(sURI as string, optional sWrappingHTMLElement as string = "DOCUMENT.BODY") as string(longstring object?)
+	
+	sWrappingElementType = split(sWrappingHTMLElement, ".")(0)
+	sWrappingValue = split(sWrappingHTMLElement, ".")(1)
+	select case(sWrappingElementType)
+		case "DOCUMENT":
+			select case (sWrappingValue)
+				case "BODY":
+				case "HEAD":
+				case "ALL":
+			end select
+		case "DIV":
+			'get element by ID, as ID is unique for DIVs.
+		case "CLASS":
+			'get element by ID, as ID is unique for DIVs.
+
+
+	end select
+
+end sub
