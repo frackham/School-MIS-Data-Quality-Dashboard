@@ -1,0 +1,73 @@
+* 			{ font-family: arial, sans-serif; padding:0px; margin:0px; text-decoration:none;}
+
+body			{ background-color: #fafeff; }
+
+#header			{ padding-top: 0px; padding-left: 50px; padding-bottom: 40px;}
+#header h1 		{ font-size: 1.2em; font-family: TNRoman, serif; position:relative; top: 50px; left:-18px;}
+#headerimage		{ float:left;}
+#headernotes		{ position:relative; top: 50px; left:-18px;}
+#aim			{ position:relative; top: 50px; left:-18px; color:#999; font-size:0.8em;}
+
+.clearer		{ clear:both;}
+
+.area			{ position:relative; width: 100px; height:50px; margin:5px; padding:10px; text-decoration:none; left:10px;}
+.subarea		{ position:relative; top:-14px;width: 8px; height:5px; margin:1px; padding:0px; text-decoration:none; left:10px; z-index:50; border:1px solid black; font-size:0.7em;}
+.info			{ position:absolute; top:50px; left:100px;}
+.apprequirements	{ background-color: #CCC;color: #333; font-size: 0.8em; }
+.hidden			{ display:none;}
+
+.emphasis		{ font-weight: bold; font-size:0.9em;}
+.biggeremph		{ font-weight: bold;}
+.greenemph		{ color: #0d6137;}
+.note			{ font-size:0.8em;}
+.infolink		{ top: 0px !important; margin-left: 0px!important;}
+.videolink		{ top: 0px !important; margin-left: 0px!important;}
+	
+.rag-red		{ background-color: #ed2024;color: #333; }
+.rag-amber 		{ background-color: #ff9900;color: #333; }
+.rag-orange 		{ background-color: #ff9900;color: #333; }
+.rag-green		{ background-color: #00ff00;color: #333; }
+.rag-blue		{ background-color: #0d17d6;color: #333; }
+.rag-grey		{ background-color: #a4a4a4;color: #333; }
+
+.wholeschool		{ position:absolute; left:0px; top:120px;}
+.sims			{ position:absolute; left:200px; top:120px;}
+.sims6th		{ position:absolute; left:380px; top:120px;}
+.examinations		{ position:absolute; left:600px; top:120px;}
+.it-infrastructure	{ position:absolute; left:780px; top:120px;}
+.elearning		{ position:absolute; left:960px; top:120px;}
+.othersystems		{ position:absolute; left:600px; top:520px;}
+.meta-dashboard		{ position:absolute; left:780px; top:520px;}
+
+.parent			{ position:relative !important; left:0px;}
+.parent a		{ position:relative; top:-8px;}
+.child			{}
+.child a		{ position:relative; top:-8px;}
+.subchild		{ position:relative; left:20px;}
+.subchild a		{ position:relative; left:-60px;}
+
+.linklist		{ position:inherit;}
+.linklist ul 		{ list-style-type: none; padding-left: 50px; margin-top:10px;}
+.linklist li 		{ padding-bottom: 10px;}
+.linklist a 		{ position:relative; }
+.linklist a:link 	{ color: #000000;}
+.linklist a:visited { color: #0a1688;}
+.linklist a:hover 	{ color: blue;}
+.linklist a:active 	{ color: blue;}
+
+.linktested 		{ color: black !important;}
+.linkold 		{ color: gray !important;}
+
+.infotext		{ position:absolute; min-width:300px; left:100px;top:65px;z-index:999; background-color: #CCC;font-size: 0.9em; width: 80%; padding: 3px;}
+.infotext ul li a, 
+.infotext ul li a:visited, 
+.infotext ul li a:hover, 
+.infotext ul li a:link, 
+.infotext ul li a:active{ color:red; /*DEFAULT colour is red. USE CLASS to show that the item is ready and linked!*/ font-weight: bold; font-size:0.8em; top:3px;}
+
+
+
+
+#footerwrapper		{ position:absolute; z-index:300; width:99%; top: 1700px; margin: 0px; padding: 0px; height: 40px;}
+#footer			{ /*padding-top: 50px;*/}
+#footertext		{ padding-left: 90px; font-size: 0.8em; font-family: arial, sans-serif; color: #333;}

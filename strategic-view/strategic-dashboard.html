@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Manager Dashboard</title>
+	<link type="text/css" rel="stylesheet" href="_src/dmdashboard.css" />
+
+    <!-- <script type="text/javascript" src="_src/jquery-1.4.2.js"></script> -->
+    <script type="text/javascript" src="_src/jquery-2.1.1.min.js"></script>
+	
+    <script type="text/javascript">
+    	//TODO: move this whole section to a separate js file.
+    	var LOGGING = true;
+    	if (LOGGING != true){ console.error("LOGGING variable not available and not true");};
+    	 
+		$(document).ready(function() {
+			
+			/* This should fire at the start  */
+			var o = $(document);
+			if (LOGGING) { console.info("**document.ready() fired.");};
+			if (LOGGING) { console.dir($(document));};
+
+			
+			
+			o.children('.infotext').hide();
+			
+			if (LOGGING) { 
+				console.assert(o.children('.infotext').is(":hidden") === false, "not all infotexts are hudden..?"); //jQuery is() matches if *any* of them aren't hidden.
+			};
+				
+			
+			
+		   $('.info').click(function(event){
+		       //var o = $(this);
+			   var o = event.target;
+			if (LOGGING) { console.info("" + o + "**.info clicked.");};
+		       $(this).parent().children('.infotext').toggleClass('hidden'); 
+		   });
+		   $('.video').click(function(event){
+		       var o = $(this);
+			if (LOGGING) { console.info("**.video clicked.");};
+		       var vidlink = o.parent().children('.infotext').children('.videolink'); 
+		       /* alert('This will be a link to a video guide: ' + vidlink.get()); */
+		       /* loadVideo(vidlink); */
+		   });
+		   $('.videolink').click(function(event){
+		       var v = $(this);
+			if (LOGGING) { console.info("**.videolink clicked.");};
+		       var target = $(event.target);
+				
+		       /* alert('video click function called, video should be at should be: ' + v.get()); */
+		       /* loadVideo(v);*/
+		   });
+		   
+		   
+	
+		   
+		 });
+
+
+     
+   </script>
+
+	
+</head>
+<body>
+	<div id="header">	
+		<h1>Data Manager Dashboard</h1>
+		<p id="headernotes">Click on a header to see current status of this area. Click on the <img src="_src\20x20 info.png" alt="Click on these for more information"/> icon to see more resources related to the area.</p>
+		<p id="aim">The aim of this is (a) to be able to immediately monitor and report on all areas of school data <i>(in response to reprioritisation, external need (eg OFSTED, Critical Incident), or performance management)</i>, and (b) facilitate changing between priorities <i>(orientation part of OODA cycle)</i>.</p>	
+	</div>
+	
+	<div class="clearer"></div>
+	
+	<div class="linklist">
+	<ul class="wholeschool">
+		<li class="area rag-green parent">
+			<a target="_blank" href="#">Whole School</a>
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Whole School:</b>
+				<br /> Overall, key requirements are being met on an ad hoc basis. The intention is to use this document to provide immediate transparency and strategic oversight of all areas.
+				<br /> Next step, once complete: Discuss with SCR and CHA (separately) as to whole school focus/needs (Align to school needs). Also need to consider what is Strategic, and what is Assessment. RAISE and such aren't really strategic in the sense of future projection...
+				<ul>Monitoring:
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\Whole School\Dashboard - Data Manager.xlsx">Dashboard - Data Manager</a></li>
+					<li><a class="linktested" target="_blank" href ="https://trello.com/b/gRH3AHHe/data-tasks">Trello task list</a></li>
+					<li><a target="_blank" href ="#">PM Targets</a></li>
+					<li><a target="_blank" href ="#">Team Targets</a></li>
+
+				</ul>
+				<ul>Resources:
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\Whole School\Data Team vision (inc SLT updates).xlsx">Vision</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data">Dashboard File Path</a></li>	
+					<li><a target="_blank" href ="#">PHS SDP</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\Whole School\A World Class Curriculum Audit.pdf">A World Class Curriculum Audit</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\Whole School\World Class Curriculum Principles explained.pdf">World Class Curriculum Principles explained</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\Whole School\9 Pillars of Greatness booklet.pdf">9 Pillars London Challenge</a></li>
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\Whole School\Information Requests troubleshooting, problems, symptoms.pptx">Information Process Flow and Request troubleshooting</a></li>
+					<li><a class="linkold" target="_blank" href ="http://www.education.gov.uk/escs-isb">Information Standards Board</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\Whole School\Strategic\report_100050_ks4.pdf">OFSTED PHS Data Dashboard (full) 2013</a></li>
+
+				</ul>
+			</div>
+		</li>
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">Data Protection</a>
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Data Protection:</b>
+				<br />overall, key requirements are being met on an ad hoc basis. 
+				<br />Next steps: rewrite data policy into 2, issue guidance, write quick breach action protocol.
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Data Processors</a></li>
+					<li><a target="_blank" href ="#">+Risk heatmap</a></li>
+					<li><a target="_blank" href ="#">+DPA and Breach log?</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">Data Policies</a></li>
+					<li><a class="linktested" target="_blank" href ="https://www.gov.uk/government/publications/standards-for-official-statistics-published-by-the-department-for-education">DfE Standards for Official Statistics</a></li>
+					<li><a target="_blank" href ="#"></a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Records Management</a>
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden">Records Management:
+				<br /><br />Next step - trial period with ShredIt.
+				</span>
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Usage log</a></li>
+					<li><a target="_blank" href ="#">+Visit log?</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">RMS retention model</a></li>
+					<li><a target="_blank" href ="#"></a></li>
+				</ul>		
+			</div>
+		</li>
+
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">Strategic Overviews</a>
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Strategic Overviews:</b>
+				<br />overall, key requirements are being met on an ad hoc basis. 
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+SDP Evidence/Monitoring</a></li>
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\SIMS\Assessment\2012-13 Summary\2013_unvalidated_100050.pdf">RAISEonline 2013 validated</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Assessment\2012-13 Summary\2013_unvalidated_100050.pdf">RAISEonline 2013 FRA overview</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Assessment\2012-13 Summary\Raise Online Key Indicators 2013 (FRA annotations).pdf">RAISEonline 2013 Governor overview</a></li>
+
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">+Strategic monitoring from JISC session (how to measure strategic shortfall).</a></li>
+					<li><a target="_blank" href ="#">+PESTLE</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\Whole School\Strategic\SIMS Report Index - Strategic.xlsx">List of SIMS reports.</a></li>
+				</ul>			
+			
+			</div>
+		</li>
+
+		<li class="area rag-grey child">
+			<a target="_blank" href="#">Governance</a>
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Governance:</b>
+				<br />overall, key requirements are being met on an ad hoc basis. 
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+SDP Evidence/Monitoring</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">+Strategic monitoring from JISC session (how to measure strategic shortfall).</a></li>
+					<li><a target="_blank" href ="#">+PESTLE</a></li>
+				</ul>			
+			
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Data Manager Network</a>
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Data Manager Network:</b>
+				<br />Regular LAswap meetings, mainly at PHS. 
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">--</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">--</a></li>
+				</ul>			
+			
+			</div>
+		</li>
+		<li class="area rag-red child">
+			<a target="_blank" href="#">Digital Resource Discovery</a>
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Digital Resource Discovery:</b>
+				<br />This relates to passing on information about resources to appropriate curriculum areas. Part of eLearning?  
+				<ul>Monitoring:
+					<li><a class="linkold" target="_blank" href ="www.twitter.com">Twitter</a></li>
+					<li><a class="linkold" target="_blank" href ="www.tweetdeck.com">Tweetdeck</a></li>
+					<li><a class="linktested" target="_blank" href ="https://showcase.lgfl.org.uk/content_books.aspx">LGFL Showcase</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">--</a></li>
+				</ul>			
+			
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Design</a>
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Design</b>
+				<br />.......  
+				<ul>Monitoring:
+					<li><a class="linkold" target="_blank" href ="www.twitter.com">Twitter</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="T:\Staff Resources\Admin\PHS Identity">PHS Identity (Logos)</a></li>
+				</ul>			
+			
+			</div>
+		</li>
+		<li class="area rag-grey child">
+			<a target="_blank" href="#">Communications</a>
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Design</b>
+				<br />.......  
+				<ul>Monitoring:
+					<li><a class="" target="_blank" href ="www.twitter.com">+PHS Twitter</a></li>
+					<li><a class="" target="_blank" href ="www.twitter.com">+PHS Website</a></li>
+					<li><a class="" target="_blank" href ="www.twitter.com">+PHS Facebook?</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="T:\Staff Resources\Admin\PHS Identity">PHS Identity (Logos)</a></li>
+				</ul>			
+			
+			</div>
+		</li>
+
+
+
+	</ul>
+	<ul class="sims">
+		<li class="area rag-green parent">
+			<a target="_blank" href="#">SIMS</a>
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS</b>:
+				<br /><br />Next step - server performance, cpd, strategic overview.
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Server dashboard</a></li>
+					<li><a target="_blank" href ="#">+Server performance over time</a></li>
+					<li><a target="_blank" href ="#">+SIMS issue log</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\_Data Governance Meetings\Data Governance Meetings Overview.xlsx">Data Governance Overview</a></li>
+					<li><a class="linktested" target="_blank" href ="..\Data Governance checks">Data Governance Checks to Add</a></li>
+					<li><a class="linktested" target="_blank" href ="..\Data Governance checks\SIMS Database Diagnostic Results">SIMS Database Diagnostics</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\_Data Governance Meetings\Data Governance meeting template.docx">Data Governance meeting template</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\SIMS Report Index.xlsx">SIMS Report List template</a></li>
+
+					<li><a class="linktested" target="_blank" href ="https://trello.com/b/s3MKycDy/data-governance">Trello Data Governance Notes</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\data quality demystified.pdf">Data Quality Demystified</a></li>
+					<li><a target="_blank" href ="#">+Technical doc on SIMS network performance</a></li>
+					<li><a class="linktested" target="_blank" href ="http://simspublications.com/932673/index.html">SIMS Online Documentation Centre</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\document server notes.jpg">document server notes</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\SIMS it issues notes.txt">SIMS it issues notes</a></li>
+				</ul>						
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Attendance</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Attendance</b>
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Attendance Dashboard (Year/Tutor/Category)</a></li>
+					<li><a target="_blank" href ="#">+Lizzie Attendance reports</a></li>
+					<li><a target="_blank" href ="#">+Tutor missed register tracking</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">+raising attendance resources/guidance</a></li>
+					<li><a class="linktested" target="_blank" href ="_src/Source%20Data/SIMS/Attendance/advice_on_school_attendance_nov_2013.pdf">DfE Attendance Code Guidance</a></li>
+					<li><a class="linktested" target="_blank" href ="https://www.gov.uk/government/collections/statistics-pupil-absence">DfE Statistics Collection: Pupil Absence</a></li>
+
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Attendance\Final 2012-13 attendance (FRA amended - not content change).xlsx">PHS 2012-13 attendance (FRA amended - not content change)</a></li>
+
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Behaviour</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Behaviour</b>
+				<br />Becca monitoring/tracking at operational, tactical by ATL/DATLs. Joined up? 
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Behaviour today dashboard(Home page?)</a></li>
+					<li><a target="_blank" href ="#">+Week/month tracking</a></li>
+					<li><a target="_blank" href ="#">+Trends</a></li>
+					<li><a target="_blank" href ="#">+Week/month tracking of Exclusions</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">OFSTED Behaviour guidance?</a></li>
+					<li><a target="_blank" href ="#">OFSTED Exclusions guidance?</a></li>
+					<li><a target="_blank" href ="#"></a></li>
+				</ul>						
+			</div>
+		</li>
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">Assessment</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Assessment</b>
+				<br /><br /> Currently, much of the data outputs in Assessment are hand produced. These are far too time consuming and error prone, and are having an impact on productivity across all areas.
+ Work is already ongoing to reduce this, but it will take some time to improve.
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Most recent datasets</a></li>
+					<li><a target="_blank" href ="#">+4matrix</a></li>
+					<li><a target="_blank" href ="#">+SISRA</a></li>
+					<li><a target="_blank" href ="#">+ maybe STrategic RAISEonline validated vs unvalidated</a></li>
+					<li><a href ="!">Predictions over time</a></li>
+					<li><a href="!">Department tracking</a></li>
+					<li><a href="!">Teacher prediction accuracy/tracaking</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<!-- <li><a target="_blank" href ="#">Assessment Timeline (Current Academic Year)</a></li>
+					--><li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Assessment\Assessment Timeline 2014-15.ppt">Assessment Timeline (Next Academic Year)</a></li>
+					<li><a target="_blank" href ="#">+Support: How to complete reports</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Assessment\Methodology_Library v8.3.doc">RAISEonline Methodologies v8.3 (Calculation mechanics)</a></li>
+					<li><a class="linktested" target="_blank" href ="http://www.jcq.org.uk/examination-results">JCQ Examination Results</a></li>
+					<li><a class="linktested" target="_blank" href ="https://www.raiseonline.org">RAISEonline</a></li>
+					<li><a class="linktested" target="_blank" href ="https://www.fftlive.org/">FFTLive</a></li>
+					<li><a class="linktested" target="_blank" href ="https://www.gov.uk/government/collections/statistics-performance-tables">DfE Statistics Collection: performance tables</a></li>
+				</ul>						
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Parental Reporting</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Parental Reporting</b>
+				<br /><br />Currently reports are being produced with minimal errors (errors have been of data entry and not of production).
+ Some delays are experienced due to the data input.			
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+completion rates per report vs opening/closing times</a></li>
+					<li><a href="!">Teacher completion accuracy/tracking</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<!-- <li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Assessment\Assessment Timeline 2013-14.ppt">Assessment Timeline (Current Academic Year)</a></li>
+					--><li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Assessment\Assessment Timeline 2014-15.ppt">Assessment Timeline (Next Academic Year)</a></li>
+					<li><a class="" target="_blank" href ="_src\Source Data\SIMS\Parental Reporting\">Support: Guidance on completing parental reports (rename!)</a></li>
+					<li><a class="" target="_blank" href ="_src\Source Data\SIMS\Parental Reporting\">Support: </a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">Curriculum / Class Assignment</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Curriculum / Class Assignment</b>
+				<br /><br />
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Course counts vs year group grid</a></li>
+					<li><a target="_blank" href ="#">+Class sizes per course/year (trend)</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\SIMS\Course_Curriculum\Course and curriculum map.xlsx">Course Map (Current Academic Year)</a></li>
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\SIMS\Course_Curriculum\Course and curriculum map.xlsx">Course Map (Next Academic Year)</a></li>
+					<li><a target="_blank" href ="#"></a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Examinations</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Examinations:</b>
+				<br /><br /> Note that this may want merging with the other Examinations item. 
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Entries vs Courses?</a></li>
+					<li><a target="_blank" href ="#">+Withdrawal rate</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Examinations\JCQ Key Dates 2013-14.pdf">JCQ Key Dates</a></li>
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\SIMS\Course_Curriculum\Course and curriculum map.xlsx">Course Map (Current Academic Year)</a></li>
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\SIMS\Course_Curriculum\Course and curriculum map.xlsx">Course Map (Next Academic Year)</a></li>
+					<li><a class="linktested" target="_blank" href ="http://www.parliamenthill.camden.sch.uk/Exam-info">PHS Examinations Timetable & Student Info</a></li>
+					<li><a class="linktested" target="_blank" href ="http://www.jcq.org.uk/exams-office">JCQ Exams Office</a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">HR / Personnel</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>HR / Personnel:</b>
+				<br /><br />			
+				<ul>Monitoring:
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\HR\GW 2014_2015 staffing v 8.xlsx">GW Staffing 2014-15</a></li>
+					<li><a class="" target="_blank" href ="_src\Source Data\SIMS\HR\">+Staff absence</a></li>
+					<li><a class="" target="_blank" href ="_src\Source Data\SIMS\HR\">+Staff cover</a></li>
+					<li><a class="" target="_blank" href ="_src\Source Data\SIMS\HR\Cover\!!">Today's Cover</a></li>
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\SIMS\HR\Cover\ClassesImpactedbyAbsence.xls">Classes impact by absence</a></li>
+					<li><a target="_blank" href ="#">+T6 Staff</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">Admissions Timeline (Next Academic Year)</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Statutory Returns\school_employed_workforce_guide_2013.pdf">School Workforce Census Guidance 2013</a></li>
+					<li><a class="linktested" target="_blank" href ="https://www.gov.uk/government/collections/statistics-school-workforce">DfE Statistics Collection: School Workforce</a></li>
+					<li><a target="_blank" href ="https://www.gov.uk/government/collections/statistics-teacher-training">DfE Statistics Collection: Initial teacher training (ITT)</a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">Permissions</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Permissions</b>
+				<br /><br />(Who has access to what. Has DPA implications, and workload. Links to HR.)
+				<br /><br />FRA attended SIMS training. Intention is to work on this over Easter.
+				
+				<ul>Monitoring:
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\SIMS\Permissions\PHS Permissions.html">PHS Permissions List</a></li>
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\SIMS\Permissions\PHS Permissions Groups.html">PHS Groups List</a></li>
+					<li><a target="_blank" href ="#">+T6 Staff</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Permissions\SIMS PERMISSIONS Latest.xls">Capita Permissions List</a></li>
+					<li><a target="_blank" href ="#"></a></li>
+					<li><a target="_blank" href ="#"></a></li>
+				</ul>	
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Admissions</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Admissions:</b>
+				<br /><br />
+				
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+projected roll</a></li>
+					<li><a target="_blank" href ="#">+Roll trend (inxluding casuals per year group)</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">Admissions Timeline (Next Academic Year)</a></li>
+					<li><a target="_blank" href ="#">Admissions Timeline (Next Next Academic Year)</a></li>
+					<li><a class="linktested" target="_blank" href ="https://www.gov.uk/government/collections/statistics-school-applications">DfE Statistics Collection: School Applications</a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Finance</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Finance:</b>
+				<br /><br />
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Budget</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">Cost Centres and Owners</a></li>
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Permissions\SIMS PERMISSIONS Latest.xls">Capita Permissions List</a></li>
+					<li><a class="" target="_blank" href ="https://www.gov.uk/government/publications/la-and-school-expenditure-financial-year-2012-to-2013">LA and school expenditure: financial year 2012 to 2013</a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Timetabling</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Timetabling</b>
+				<br /><br />
+				<ul>Monitoring:
+					<li><a target="_blank" href ="_src\Source Data\Timetabling\TT analysis using GWI staffing (HR).png">Staff timetabled loading</a></li>
+					<li><a target="_blank" href ="#">+timetable trend analysis</a></li>
+					<li><a href="!">Splits, out of subject and new teachers</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">Timetable Model (Current Academic Year)</a></li>
+					<li><a target="_blank" href ="#">Timetable Model (Next Academic Year)</a></li>
+					<li><a target="_blank" href ="#"></a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Core Student Details</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Core Student Area</b>
+				<br /><br />
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Student profile report</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a class="linktested" target="_blank" href ="https://www.gov.uk/government/collections/statistics-neet">DfE Statistics Collection: NEET</a></li>
+					<li><a target="_blank" href ="#"></a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Designed Reports</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Designed Reports</b>
+				<br /><br />...Designed Reports
+				<ul>Monitoring:
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a class="linktested" target="_blank" href ="_src\Source Data\SIMS\Designed Reports\JBA Designed Reports Guidance.pptx">Support: using designed reports</a></li>
+				</ul>	
+					
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Category</a>
+			<ul>
+			<li class="subarea rag-amber subchild">
+				<a target="_blank" href="#">FSM</a>			
+			</li>
+			<li class="subarea rag-amber subchild">
+				<a target="_blank" href="#">SEN</a>			
+			</li>
+			<li class="subarea rag-green subchild">
+				<a target="_blank" href="#">EAL</a>			
+			</li>
+			<li class="subarea rag-grey subchild">
+				<a target="_blank" href="#">G&T</a>			
+			</li>
+			</ul>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Student Categories:</b>
+				<br /><br />FSM
+				<ul>Monitoring:
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<br /><br />SEN
+				<ul>Monitoring:
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a class="linktested" target="_blank" href ="https://www.gov.uk/government/collections/statistics-special-educational-needs-sen">DfE Statistics Collection: special educational needs (SEN)</a></li>
+				</ul>
+				<br /><br />EAL
+				<ul>Monitoring:
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<br /><br />G&T
+				<ul>Monitoring:
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+			</div>
+		</li>
+
+
+
+		<li class="area blank child">
+		</li>
+
+		<li class="area rag-green child">
+			<a target="_blank" href="#">Statutory Returns (Census)</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Statutory Returns</b>
+				<br /><br />ADD STAT RETURNS MEETINGS NOTES.
+			</div>
+		</li>
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">Budgeting (Costs)</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Budgeting</b>
+				<br /><br />Add SIMS budget? 
+			</div>
+		</li>
+
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">Internal CPD</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Internal CPD</b>
+				<br /><br />Ask SCR about funding the Silver SIMS training package.
+				<br /><br />See the trello board, but this should cover (1) GUIDANCE, (2) SESSIONS, (3) RISK MAP/CAPABILITIES.
+				<ul>Monitoring:
+					<li><a target="_blank" class="linktested" href ="https://trello.com/b/260r33Q8/data-team-training-design">Trello Data Team Training planning board</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>					
+			</div>
+		</li>
+
+		<li class="area rag-red child">
+			<a target="_blank" href="#">Master Data</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Master Data</b>
+				<br /><br />This relates to data that is used as the basis for multiple other elements of data production (e.g. the dates of the academic year, the heads of faculty, the line management structure) that is not simply maintained as a matter of course / part of MIS operations. Cf. MDM (Master Data Management).
+				<br /><br />See the trends in data governance meetings, but this should cover (1) the academic year dates (including INSET - i.e. it is possible sessions. Ideally by year group), (2) Heads of Faculty/Subject (for comparison to course map, exam reports etc., (3) classes of staff (ability to use 'for each of teacher's classes' construct, such as with a loosely coupled pair of apps. One calls the second with parameters (in a loop), passing the second the instructions. Means that the second can be used by itself, too. Consider this approach for 6th form timetables...)., (4) 
+				<ul>Monitoring:
+					<li><a target="_blank" class="" href ="#">Use of academic year to analyse behaviour by week/month/term, controlled for possible sessions. Note that some months will be controlled by a great degree (December = 0.5?) so should be aware of greater fluctuation potentia. Compare this to uncontrolled (my pretty != useful chart...)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>					
+			</div>
+		</li>
+	</ul>
+	<ul class="sims6th">
+		<li class="area blank parent"></li>
+		<li class="area rag-red child">
+			<a target="_blank" href="#">6th Attendance</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">6th Behaviour</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">6th Assessment</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />PANDA!
+				<ul>Monitoring:
+					<li><a target="_blank" class="linkold" href ="https://www.gov.uk/government/publications/a-level-and-other-level-3-results-england-2012-to-2013-revised">+6th from assessment national stats...</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">+PANDA 2013</a></li>
+				</ul>	
+
+			</div>
+		</li>
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">6th Reporting</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">6th Curriculum / Class Assignment</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-red child">
+			<a target="_blank" href="#">6th Examinations</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">6th HR / Personnel</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>6th HR / Personnel:</b>
+				<br /><br />
+		
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">6th Permissions</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">6th Admissions</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">6th Finance</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">6th Timetabling</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">6th Core Student Details</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-green child">
+			<a target="_blank" href="#">6th Designed Reports</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-grey child">
+			<a target="_blank" href="#">6th Category</a>
+			<ul>
+			<li class="subarea rag-amber subchild">
+				<a target="_blank" href="#">FSM</a>			
+			</li>
+			<li class="subarea rag-grey subchild">
+				<a target="_blank" href="#">SEN</a>			
+			</li>
+			<li class="subarea rag-grey subchild">
+				<a target="_blank" href="#">EAL</a>			
+			</li>
+			<li class="subarea rag-grey subchild">
+				<a target="_blank" href="#">G&T</a>			
+			</li>
+			</ul>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area blank child">
+		</li>
+		<li class="area rag-red child">
+			<a target="_blank" href="#">6th Statutory Returns (Census)</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-grey child">
+			<a target="_blank" href="#">6th Budgeting (Costs)</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+		<li class="area rag-amber child">
+			<a target="_blank" href="#">6th Internal CPD</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SIMS Area</b>
+				<br /><br />More about SIMS Area
+			</div>
+		</li>
+	</ul>
+	<ul class="examinations">
+		<li class="area rag-grey parent">
+			<a target="_blank" href="#">Examinations</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Examinations:</b>
+				<br /><br />
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Task list, busy times?</a></li>
+					<li><a target="_blank" href ="#">+Invigilators?</a></li>
+					<li><a target="_blank" href ="_src\Source Data\_Data Governance Meetings">Data Governance Meeting (DATE)</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#"></a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-grey">
+			<a target="_blank" href="#">Entries</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Entries:</b>
+				<br /><br />Should be mapped to course details.
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Subject completion</a></li>
+					<li><a target="_blank" href ="#">+Entries vs Course membership</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">+Support: How to complete entries on SIMS.</a></li>
+					<li><a target="_blank" href ="#">+JCQ entry deadlines</a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-grey">
+			<a target="_blank" href="#">Access Arrangements</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Access Arrangements:</b>
+				<br /><br />Co-ordination with SEN?
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Access Arrangements summary</a></li>
+					<li><a target="_blank" href ="#"></a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">+JCQ Access Arrangements</a></li>
+				</ul>			
+			</div>
+		</li>
+
+	</ul>
+	<ul class="it-infrastructure">
+		<li class="area rag-grey parent">
+			<a target="_blank" href="#">IT Infrastructure</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>IT Infrastructure:</b>
+				<br /><br />
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+Performance monitoring</a></li>
+					<li><a target="_blank" href ="#">+Deprecation and costs over time</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">+System map (Process and data flow)</a></li>				
+					<li><a target="_blank" href ="#">+System map (Maturity and Change Management (4e model))</a> <a target="_blank" href ="https://fodengrealy.com/2014/04/alpha-beta-live-is-not-enough/">[4e model here]</a></li>
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\IT Infrastructure\sims_technical_roadmap_17910v2.pdf">SIMS Technical Roadmap</a></li>
+					<li><a class="linkold" target="_blank" href ="_src\Source Data\IT Infrastructure\Connect Up SIMS Roadmap 2012-14 Ver1_3 - Calendar Years.pdf">SIMS Connect up Technical Roadmap</a></li>					
+<li><a target="_blank" href ="#">+Works planning/project plan/schedule</a></li>
+					<li><a target="_blank" href ="#">+Infrastructure Risk</a></li>
+					<li><a target="_blank" href ="#">+Security Policy?</a></li>
+					<li><a target="_blank" href ="#">+Support: How to remote access?</a></li>
+				</ul>			
+			</div>
+		</li>
+
+	</ul>
+	<ul class="elearning">
+		<li class="area rag-grey parent">
+			<a target="_blank" href="#">eLearning</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>eLearning</b>
+				<br /><br />
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>	
+			</div>
+		</li>
+		<li class="area rag-grey">
+			<a target="_blank" href="#">Fronter</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Fronter</b>
+				<br /><br />Moving away, clunky and unusable. However, much good work has been done on content by Malc.
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>	
+			</div>
+		</li>
+		<li class="area rag-grey">
+			<a target="_blank" href="#">MyMaths?</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>MyMaths?</b>
+				<br /><br /> 
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>	
+			</div>
+		</li>
+
+	</ul>
+	<ul class="othersystems">
+		<li class="area rag-grey parent">
+			<a target="_blank" href="#">Other Systems</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Other Systems</b>
+				<br /><br />
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" class="linktested" href ="https://portal.tesfoundation.com/Open/Login.aspx?ReturnUrl=%2f">TES Foundation (Premises)</a></li>
+				</ul>	
+			</div>
+		</li>
+		<li class="area rag-amber">
+			<a target="_blank" href="#">Firefly</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Firefly</b>
+				<br /><br />Happy with parental portal.
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>	
+			</div>
+		</li>
+		<li class="area rag-amber">
+			<a target="_blank" href="#">SISRA</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>SISRA:</b>
+				<br /><br />Need to get people using - change plan.
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>	
+			</div>
+		</li>
+		<li class="area rag-amber">
+			<a target="_blank" href="#">4matrix</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>4matrix:</b>
+				<br /><br />Need to get people using - change plan.
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>	
+			</div>
+		</li>
+		<li class="area rag-green">
+			<a target="_blank" href="#">RAISEonline</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>RAISEonline:</b>
+				<br /><br />Check on logins?
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a class="linktested" target="_blank" href ="T:\Staff Resources\Data Team - SLT\RAISEonline">RAISEonline PDFs</a></li>
+				</ul>		
+			</div>
+		</li>
+		<li class="area rag-green">
+			<a target="_blank" href="#">FFTlive</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>FFTlive:</b>
+				<br /><br />Temporary, for 1 year of data quality improvement.
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">...</a></li>
+				</ul>	
+			</div>
+		</li>
+	</ul>
+	<ul class="meta-dashboard">
+		<li class="area rag-red parent">
+			<a target="_blank" href="#">Dashboarding (Meta)</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>Dashboarding</b>
+				<br /><br />This is currently being built. Links are placeholders, and information is not available.
+				
+				<ul>Monitoring:
+					<li><a class="linkold" target="_blank" href ="..\Analytics\log representation.xls">Analyse all logs</a></li>
+				</ul>	
+				<ul>Resources:
+					<li><a target="_blank" href ="#">+JUICE guide on dashboards?</a></li>
+				</ul>	
+			</div>
+		</li>
+		<li class="area rag-amber">
+			<a target="_blank" href="#">FRA Workload</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>FRA Workload</b>
+				<br /><br />
+				<ul>Monitoring:
+					<li><a class="linktested" target="_blank" href ="..\Analytics\FRA Email Analytics\FRA Email Analytics.txt">FRA email monitoring</a></li>
+					<li><a class="linktested" target="_blank" href ="..\Analytics\FRA Email Analytics\FRA Email Analytics notes.txt">FRA email notes</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">+Job Spec</a></li>
+				</ul>			
+			</div>
+		</li>
+		<li class="area rag-grey">
+			<a target="_blank" href="#">JBA Workload</a>			
+			<img class="info" src="_src\20x20 info.png" alt="Click here for more information"/>
+			<div class="infotext hidden"><b>JBA Workload</b>
+				<br /><br />Grey as we need to resolve JBA future role.
+				<ul>Monitoring:
+					<li><a target="_blank" href ="#">+FRA email monitoring</a></li>
+				</ul>
+				<ul>Resources:
+					<li><a target="_blank" href ="#">+Job Spec</a></li>
+				</ul>			
+			</div>
+		</li>
+	</ul>	
+	</div>
+	<div class="clearer"></div>
+	<div id="footerwrapper">
+		<div id="footer">
+			<p id="footertext">Footer here. Needed to space so we can reach the (i) boxes for the last items</p>
+			<p>Want to add a separate system status (what is working) dashboard view. e.g. Green for everything, but Red on SIMS when we're upgrading.</p>
+		</div>
+	</div>
+</body>
+</html>
