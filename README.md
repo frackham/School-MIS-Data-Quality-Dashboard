@@ -34,7 +34,6 @@ public function DoDemoVBACode() as string()
 end function
 ```
 
-
 #Principles
 
 1. **Open source**. Both development and the app itself is open source. I (we?) feel like this is too imporrtant to lave to MIS vendors. Ideally this'd be a open source language as well, but that'll probably intergere with...
@@ -42,9 +41,7 @@ end function
 3. **Easily exten_dable_**. Got a new rule to test? Just add it to your schedule, and let the dashboard discover it.
 4. **Real, actionable measurement**.
 5. **Tweak and adapt to your school _over time_, not at deployment**.
-6. **Easily exten_sible_**. [See here for the why we mean extensible and not extendable](http://en.wikipedia.org/wiki/Extensibility).
-
-< This one's a bit geeky. Sorry.
+6. **Easily exten_sible_**. [See here for the why we mean extensible and not extendable](http://en.wikipedia.org/wiki/Extensibility). < This one's a bit geeky. Sorry.
 
 7. **Assessment last**. Assessment is arguably the most powerful of the data that drives learning. It's also the most school specific, the trickiest to define and the most susceptible to national change. We get this tool right first, and then move to summative assessment when it's established and working well.
 8. **Enable data users to discover related information**. It's not easy to learn what data is out there.
